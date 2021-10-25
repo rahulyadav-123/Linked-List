@@ -12,5 +12,8 @@ public class ListMain {
 	linkedList.insertInbtwn(30);
 	System.out.println("updated list: ");
 	linkedList.display();
+	linkedlist.pop();
+	System.out.println("After deleting the first node");
+	linkedList.display();
 	}
 }
