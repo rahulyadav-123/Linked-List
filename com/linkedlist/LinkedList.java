@@ -37,7 +37,7 @@ public class LinkedList {
 		}
 	 
 	 //delete at first
-		public void pop() {
+	public void pop() {
 			Node toDelete = head;
 			head = head.next;
 			toDelete = null;
@@ -51,31 +51,22 @@ public class LinkedList {
 		temp.next = null;
 	}
 	
-	public void searchNode(int data) {  
-        Node temp = head;  
-        int count = 1;  
-        boolean flag = false;   
+	public void searchNode(int data, Node node) {  
+        Node temp = head;     
         if(head == null) {  
             System.out.println("List is empty");  
         }  
         else {  
             while(temp != null) {    
-                if(temp.data == data) {  
-                    flag = true;  
+                if(temp.data == data) {   
                     break;  
                 }  
-                count++;  
                 temp = temp.next;  
-            }  
+                }  
+            Node tempnode = temp.next;
+            temp.next = node;
+            node.next = tempnode;
         }  
-        if(flag == true)  
-        {
-             System.out.println("Element:" + data + " is present at the position " + count); 
-        }
-        else  
-        {
-             System.out.println("Element is not present in the list");  
-        }
 	}
 	
 	public void display() {

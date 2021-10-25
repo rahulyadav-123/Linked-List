@@ -4,8 +4,8 @@ public class ListMain {
 	public static void main(String[] args) {
 		
 		LinkedList linkedList = new LinkedList();
-		linkedList.insert(56);
-		linkedList.insert(70);
+		linkedList.insertAtEnd(56);
+		linkedList.insertAtEnd(70);
 		System.out.println("Original list: ");
 		linkedList.display();
 		
@@ -13,11 +13,13 @@ public class ListMain {
 		System.out.println("updated list: ");
 		linkedList.display();
 		
-		linkedList.poplast();
-		System.out.println("After deleting the Last node");
-		linkedList.display();
-
+		//linkedList.popLast();
+		//System.out.println("After deleting the Last node");
+		//linkedList.display();
+	
 		System.out.println("The searched element is: 30");
-		linkedList.searchNode(30);
-		}
+		Node newNode = new Node(40);
+		linkedList.searchNode(30, newNode);
+		linkedList.display();
+	}
 }
