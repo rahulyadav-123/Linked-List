@@ -47,7 +47,7 @@ public class LinkedList {
 		Node temp = head;
 		while(temp.next.next != null){
 			temp = temp.next;
-		}	
+		}
 		temp.next = null;
 	}
 	
@@ -63,10 +63,26 @@ public class LinkedList {
                 }  
                 temp = temp.next;  
                 }  
+            
             Node tempnode = temp.next;
             temp.next = node;
             node.next = tempnode;
         }  
+	}
+	
+	public void deleteSearchNode(int data) {  
+           if(head == null) {  
+            System.out.println("List is empty");  
+            }  
+           
+           Node temp = head;    
+           while (temp.next.data != data) {
+               temp = temp.next;
+           }
+           
+           Node previousNode = temp;
+           Node nextNode = temp.next.next;
+           previousNode.next = nextNode;
 	}
 	
 	public void display() {
