@@ -13,8 +13,11 @@ public class ListMain {
 		System.out.println("updated list: ");
 		linkedList.display();
 		
-		linkedList.popLast();
+		linkedList.poplast();
 		System.out.println("After deleting the Last node");
 		linkedList.display();
+
+		System.out.println("The searched element is: 30");
+		linkedList.searchNode(30);
 		}
 }
