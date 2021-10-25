@@ -1,23 +1,27 @@
 package com.linkedlist;
 
 public class LinkedList {
-	public static void main(String[] args) {
-		 Node firstNode = new Node(56);
-	     Node secondNode = new Node(70);
-	     Node thirdNode = new Node(30);
-
-
-	     Node head = firstNode;
-	     firstNode.next = secondNode;
-	     secondNode.next = thirdNode;
-	     Node tail = thirdNode;
-
-	      Node temp = head;
-	      while (temp != null) {
-	    	  System.out.println(temp.data);
-	    	  temp = temp.next;
-	        }
-	 }
-
+	Node head;
+	Node tail;
+	
+	public void insert(int data) {
+		Node node = new Node(data);
+		if(head == null) {
+			head = node;
+			tail = node;
+			}
+		else {
+			Node temp = head;
+			head= node;
+            node.next = temp;
+		}
+	}
+	
+	public void display() {
+		Node temp = head;
+		while(temp != null) {
+			System.out.println(temp.data);
+			temp = temp.next;
+		}
+	}
 }
-
