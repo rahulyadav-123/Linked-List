@@ -11,11 +11,17 @@ public class LinkedList {
 			tail = node;
 			}
 		else {
-			Node temp = head;
-			head= node;
-            node.next = temp;
+			tail.next = node;
+			tail = node;
 		}
 	}
+	
+	public void insertInbtwn(int data) {
+		Node node = new Node(data);
+		Node temp = head.next;
+		head.next = node;
+		node.next = temp;
+		}
 	
 	public void display() {
 		Node temp = head;
